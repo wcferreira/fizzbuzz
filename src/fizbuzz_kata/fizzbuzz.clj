@@ -2,10 +2,11 @@
 
 (defn fizzbuzz
   [value]
-  (case value
-    3 "Fizz"
-    5 "Buzz"
-    (str value)))
+  (cond
+    (= 0 (mod value 3)) "Fizz"
+    (= 0 (mod value 5)) "Buzz"
+    :else (str value)))
+
 
 
 
