@@ -2,4 +2,5 @@
 
 (defn fizzbuzz
   [value]
-  1)
+  "1")
+

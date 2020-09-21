@@ -3,5 +3,7 @@
             [fizbuzz-kata.fizzbuzz :as fb]))
 
 
-(deftest test-can-call-fizzbuzz
-  (is (= 1 (fb/fizzbuzz 1))))
+(deftest test-returns-1-with-1-passed-in
+  (let [ret-val (fb/fizzbuzz 1)]
+    (is (= "1" ret-val))))
+
