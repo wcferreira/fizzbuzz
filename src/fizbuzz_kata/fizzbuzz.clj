@@ -2,5 +2,6 @@
 
 (defn fizzbuzz
   [value]
-  "1")
+  (str value))
+
 
