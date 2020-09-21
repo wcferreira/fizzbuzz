@@ -2,6 +2,20 @@
   (:require [clojure.test :refer :all]
             [fizbuzz-kata.fizzbuzz :as fb]))
 
+(defn setup []
+  (println "setup"))
+
+(defn teardown []
+  (println "teardown"))
+
+(use-fixtures :once
+              (fn [tests]
+                (println "=========================")
+                (setup)
+                (tests)
+                (teardown)
+                (println "=========================")))
+
 
 (deftest test-returns-1-with-1-passed-in
   (let [ret-val (fb/fizzbuzz 1)]
@@ -27,3 +41,6 @@
   (let [ret-val (fb/fizzbuzz 10)]
     (is (= "Buzz" ret-val) "It should return \"Buzz\" when 10 passed in")))
 
+(deftest test-returns-fizzbuzz-with-15-passed-in
+  (let [ret-val (fb/fizzbuzz 15)]
+    (is (= "FizzBuzz" ret-val) "It should return \"FizzBuzz\" when 15 passed in")))
