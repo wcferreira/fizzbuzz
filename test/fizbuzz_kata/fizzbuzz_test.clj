@@ -23,3 +23,7 @@
   (let [ret-val (fb/fizzbuzz 6)]
     (is (= "Fizz" ret-val) "It should return \"Fizz\" when 6 passed in")))
 
+(deftest test-returns-buzz-with-10-passed-in
+  (let [ret-val (fb/fizzbuzz 10)]
+    (is (= "Buzz" ret-val) "It should return \"Buzz\" when 10 passed in")))
+
